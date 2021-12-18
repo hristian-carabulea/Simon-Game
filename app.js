@@ -3,15 +3,39 @@ var randomNumber = 0;
 var buttonColors = ["red", "blue", "green", "yellow"];
 var randomChosenColor = 0;
 var gamePattern = [];
+var started = false;
+var level = 0;
+
+//1. Use jQuery to detect when a keyboard key has been pressed, when that happens for the first time, call nextSequence().
 
 main();
 
 function main() {
-  
-  randomNumber = nextSequence();
+  //1. Use jQuery to detect when a keyboard key has been pressed, when that happens for the first time, call nextSequence().
+  $(document).keypress(function() {
+    console.log("main()");
+    if (!started) {
+
+      //3. The h1 title starts out saying "Press A Key to Start", when the game has started, change this to say "Level 0".
+      $("#level-title").text("Level " + level);
+      nextSequence();
+      started = true;
+    }
+  });
+}
+
+
+function nextSequence() {
+
+  console.log("main()");
+
+  var randomNum = Math.random(); // get random number based on the list length
+  var randomNumber = (Math.floor(randomNum * 4));
   console.log("randomNumber: " + randomNumber);
+
   randomChosenColor = buttonColors[randomNumber]
   console.log("randomChosenColor: " + randomChosenColor);
+
   gamePattern.push(randomChosenColor);
   console.log("gamePattern pushed colors: " + gamePattern);
 
@@ -19,14 +43,6 @@ function main() {
 
   makeSound(randomChosenColor); // have to click on the piece to activate sound?
 
-
-}
-
-
-function nextSequence() {
-  var randomNum = Math.random(); // get random number based on the list length
-  var randomNumber = (Math.floor(randomNum * 4));
-  return(randomNumber);
 }
 
 function flashColor(color) {
@@ -35,18 +51,10 @@ function flashColor(color) {
 }
 
 function makeSound(color) {
-  var text = "sounds/" + color + ".mp3";
-  var audio1 = new Audio(text);
-  var resp = audio1.play();
 
-  if (resp!== undefined) {
-      resp.then(_ => {
-        audio1.play(); // autoplay starts!
-      }).catch(error => {
-        //show error
-      });
-  }
-  
+  var audio = new Audio("sounds/" + color + ".mp3");
+  audio.load();
+  audio.play();
 } //end function makeSound
 
 function buttonAnimation(color) {
