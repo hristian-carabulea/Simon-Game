@@ -1,4 +1,4 @@
-
+// v. 2021.12.19f //
 var buttonColours = ["red", "blue", "green", "yellow"];
 
 var gamePattern = [];
@@ -6,6 +6,8 @@ var userClickedPattern = [];
 
 var started = false;
 var level = 0;
+
+var firstTime = true;
 
 main();
 
@@ -51,6 +53,13 @@ function main() {
   }
   
   function nextSequence() {
+
+    if (firstTime == true) { // added this for app to be used on a mobile device
+      var elem = document.querySelector("#inputField");
+      elem.parentNode.removeChild(elem);
+        firstTime = false;
+    }
+  
     userClickedPattern = [];
     level++;
     $("#level-title").text("Level " + level);
