@@ -1,4 +1,4 @@
-// v. 2021.12.19f //
+// v. 2021.12.19j //
 var buttonColours = ["red", "blue", "green", "yellow"];
 
 var gamePattern = [];
