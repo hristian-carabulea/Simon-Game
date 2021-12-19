@@ -1,4 +1,4 @@
-/* // v. 2021.12.19h */
+/* // v. 2021.12.19i */
 body {
   text-align: center;
   background-color: #8581ca;
@@ -17,7 +17,7 @@ body {
 @media screen {    
 
   #inputField {
-    width: 40%;
+    width: 50%;
     color: red;
   }
 
