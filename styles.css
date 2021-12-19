@@ -15,51 +15,55 @@ body {
 }
 @media screen {    
 
-    .row {
-      display: inherit;
-      flex-wrap:initial;
-      padding: 0px 0px 0px 0px;
-    }      
+  input {
+    width: 50%;
+  }
 
-    .btn {
-      margin: 10px;
-      display:inline-flex;
-      height: 10rem;
-      width: 10rem;
-      border: 10px solid black;
-      border-radius: 20%;
-    }
-    
-    .set {
-      margin: 1% auto;
-      text-align:center; 
-    }
+  .row {
+    display: inherit;
+    flex-wrap:initial;
+    padding: 0px 0px 0px 0px;
+  }      
 
-    .game-over {
-      background-color: red;
-      opacity: 0.8;
-    }
-    
-    .red {
-      background-color: red;
-    }
-    
-    .green {
-      background-color: green;
-    }
-    
-    .blue {
-      background-color: blue;
-    }
-    
-    .yellow {
-      background-color: yellow;
-    }
-    
-    .pressed {
-      box-shadow: 0 0 20px white;
-      background-color: grey;
-    }
+  .btn {
+    margin: 10px;
+    display:inline-flex;
+    height: 10rem;
+    width: 10rem;
+    border: 10px solid black;
+    border-radius: 20%;
+  }
+  
+  .set {
+    margin: 1% auto;
+    text-align:center; 
+  }
+
+  .game-over {
+    background-color: red;
+    opacity: 0.8;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
+  
+  .yellow {
+    background-color: yellow;
+  }
+  
+  .pressed {
+    box-shadow: 0 0 20px white;
+    background-color: grey;
+  }
     
 }
 
