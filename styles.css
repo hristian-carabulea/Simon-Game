@@ -1,4 +1,4 @@
-/* // v. 2021.12.19g */
+/* // v. 2021.12.19h */
 body {
   text-align: center;
   background-color: #8581ca;
@@ -18,6 +18,7 @@ body {
 
   #inputField {
     width: 40%;
+    color: red;
   }
 
   .row {
