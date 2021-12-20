@@ -1,4 +1,4 @@
-// v. 2021.12.19j //
+// v. 2021.12.20a //
 var buttonColours = ["red", "blue", "green", "yellow"];
 
 var gamePattern = [];
@@ -42,7 +42,7 @@ function main() {
       } else {
         playSound("wrong");
         $("body").addClass("game-over");
-        $("#level-title").text("Game Over, Press Any Key to Restart");
+        $("#level-title").text("Game Over @ Level " + level + ". Refresh to Restart!");
   
         setTimeout(function () {
           $("body").removeClass("game-over");
