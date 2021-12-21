@@ -1,7 +1,8 @@
-/* v. 2021.12.20a */
+/* v. 2021.12.21a */
 body {
   text-align: center;
   background-color: #8581ca;
+  cursor: url('cursorTree.png'), auto;	
 }
 
 #level-title {
